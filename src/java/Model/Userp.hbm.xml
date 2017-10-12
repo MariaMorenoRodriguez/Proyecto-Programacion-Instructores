@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Userp" optimistic-lock="version" table="userp">
+    <id name="idUser" type="long">
+      <column name="IdUser"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="Model.Rol" fetch="select" name="rol">
+      <column name="fkRol" not-null="true"/>
+    </many-to-one>
+    <property name="passwordU" type="string">
+      <column length="30" name="PasswordU" not-null="true" unique="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="persons" table="person">
+      <key>
+        <column name="fkUserP" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Person"/>
+    </set>
+  </class>
+</hibernate-mapping>

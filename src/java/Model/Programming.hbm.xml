@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Programming" optimistic-lock="version" table="programming">
+    <id name="idProgramming" type="java.lang.Long">
+      <column name="IdProgramming"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="Model.Activitytype" fetch="select" name="activitytype">
+      <column name="fkActivityType" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Groupp" fetch="select" name="groupp">
+      <column name="fkGroup" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Institute" fetch="select" name="institute">
+      <column name="fkInstitute" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Person" fetch="select" name="person">
+      <column name="fkPersonInstructor" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Workingday" fetch="select" name="workingday">
+      <column name="fkWorkingDay" not-null="true"/>
+    </many-to-one>
+    <property name="hoursToWork" type="long">
+      <column name="HoursToWork" not-null="true"/>
+    </property>
+    <property name="daysToWork" type="string">
+      <column length="60" name="DaysToWork" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

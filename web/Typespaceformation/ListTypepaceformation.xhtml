@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/style.default.css"/>    
+    <link rel="Stylesheet" type="text/css" href="../CSS/custom.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/stylemyfontastic.css"/>   
+        <!--Archivo Favicon-->
+    <link rel="shortcut icon" href="../Img/favicon.ico"/>
+    <h:body>
+        <h:dataTable var="list" value="#{beanTypespaceformation.List()}">
+            <h:column>
+                <f:facet name="IdSpaceFormation">
+                <h:outputLabel value="Id Tipo Espacio de Formacion"/>
+            </f:facet>
+                <h:outputText value="#{list.idTypeSpaceFormation}"/>
+            </h:column>
+            <h:column>
+                
+                <f:facet name="NameSpaceFormation">
+                <h:outputLabel value="Tipo de Espacio"/>
+            </f:facet>
+                <h:outputText value="#{list.nameSpaceFormation}"/>
+            </h:column>
+        </h:dataTable>
+            <script src="../JS/99347ac47f.js"/>    
+    <script src="../JS/ajaxlibsjquery.js"/>
+    <script src="../JS/tether.min.js"/>
+    <script src="../JS/bootstrap.min.js"/>
+    <script src="../JS/jquery.cookie.js"/>
+    <script src="../JS/jquery.validate.min.js"/>
+    <script src="../JS/front.js"/>
+    
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src="../JS/analytics.js";
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    </h:body>
+</html>
+

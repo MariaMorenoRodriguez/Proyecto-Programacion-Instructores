@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Typetrainingprogram" optimistic-lock="version" table="typetrainingprogram">
+    <id name="idTypeTrainingProgram" type="java.lang.Long">
+      <column name="IdTypeTrainingProgram"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nameTypeTrainingProgram" type="string">
+      <column length="60" name="NameTypeTrainingProgram" not-null="true" unique="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="trainingprograms" table="trainingprogram">
+      <key>
+        <column name="fkTypeTrainingProgram" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Trainingprogram"/>
+    </set>
+  </class>
+</hibernate-mapping>

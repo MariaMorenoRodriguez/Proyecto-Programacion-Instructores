@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Workingday" optimistic-lock="version" table="workingday">
+    <id name="idWorkingDay" type="java.lang.Long">
+      <column name="IdWorkingDay"/>
+      <generator class="identity"/>
+    </id>
+    <property name="workingDayName" type="string">
+      <column length="50" name="WorkingDayName" not-null="true" unique="true"/>
+    </property>
+    <property name="startTime" type="time">
+      <column length="8" name="StartTime" not-null="true"/>
+    </property>
+    <property name="finishTime" type="time">
+      <column length="8" name="FinishTime" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="programmings" table="programming">
+      <key>
+        <column name="fkWorkingDay" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Programming"/>
+    </set>
+  </class>
+</hibernate-mapping>

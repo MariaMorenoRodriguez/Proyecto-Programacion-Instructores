@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Lista de Fichas</title>
+    </h:head>
+    
+    <!-- Librerias/Archivos de Estilos y CSS-->
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/style.default.css"/>    
+    <link rel="Stylesheet" type="text/css" href="../CSS/custom.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/stylemyfontastic.css"/>
+    
+    <!--Archivo Favicon-->
+    <link rel="shortcut icon" href="../Img/favicon.ico"/>
+    
+    
+    
+    <h:body>
+        <div class="page charts-page">
+      <!-- Main Navbar-->
+      <header class="header">
+                <nav class="navbar" >
+          <!-- Search Box-->
+          <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="Que Desea Ver..." class="form-control"/>
+            </form>
+          </div>
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between"> 
+                 
+                 
+                 
+              <!-- Navbar Header-->
+              
+              <div class="navbar-header">
+                  
+                <!-- Navbar Brand --><a href="menu.jsp" class="navbar-brand">
+                    
+                  <div class="brand-text brand-big hidden-lg-down"><span></span><strong>Consultar Ficha</strong></div>
+                  
+                  <div class="brand-text brand-small"><strong>ISS</strong></div></a>
+                <!-- Toggle Button-->
+                <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+              </div>
+              
+              
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                  
+                <!-- Search-->
+                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                
+                
+                <!-- Notifications-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>Tu tienes 6 mensajes</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>Tu tienes 2 seguidores</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Servidor Reiniciado</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>Tu tienes 3 seguidores</div>
+                          <div class="notification-time"><small>10 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Ver todas las notficaciones                                            </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Messages                        -->
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Jason Doe</h3><span>Mensaje Eniviado</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>Mensaje Enviado</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>Mensaje Enviado</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Lee todos los mensajes</strong></a></li>
+                  </ul>
+                </li>
+                <!-- Logout    -->
+                <li class="nav-item"><a href="index.jsp" class="nav-link logout">Cerrar Session<i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center">
+            <div class="avatar"><img src="../Img/logo.png" alt="..." class="img-fluid rounded-circle"/></div>
+            <div class="title">
+              <h1 class="h4">Diego Boada</h1>
+              <p>Administrador</p>
+            </div>
+          </div>
+          <!-- Sidebar Navidation Menus--><span class="heading">Principal</span>
+          <ul class="list-unstyled">
+            <li class="active"> <a href="menu.jsp"><i class="icon-home"></i>Casa</a></li>
+            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Gestiones</a>
+              <ul id="dashvariants" class="collapse list-unstyled">
+                <li><a href="#">Consultar Programacion</a></li>
+                <li><a href="ListSchool.jsp">Consultar Colegio</a></li>
+                <li><a href="ListFile.jsp">Consultar Ficha</a></li>
+                <li><a href="#">Consultar Usuarios</a></li>
+              </ul>
+            </li>
+            
+            <li> <a href="#Listados" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Cargue</a>
+                   <ul id="Cargue" class="collapse list-unstyled">
+                <li><a href="#">Listar Programación</a></li>
+                <li><a href="#">Listar Instituto</a></li>
+                <li><a href="#">Listar Ficha</a></li>
+                <li><a href="#">Listar Usuarios</a></li>
+              </ul>
+            </li>
+            
+          </ul><span class="heading">Extras</span>
+          <ul class="list-unstyled">
+            <li> <a href="Mapa.jsp"> <i class="fa fa-map-marker"></i>Mapa</a></li>
+            <li> <a href="#"> <i class="fa fa-calendar-check-o"></i>Calendario</a></li>
+          </ul>
+          
+        </nav>
+        <div class="content-inner">
+          <!-- Page Header-->
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">Ficha</h2>
+            </div>
+          </header>
+          
+          
+          
+          <!-- Breadcrumb-->
+          <ul class="breadcrumb">
+            <div class="container-fluid">
+              <li class="breadcrumb-item"><a href="menu.html">Home</a></li>
+              <li class="breadcrumb-item active">Consultar Ficha</li>
+            </div>
+          </ul>
+          
+          
+          <br/>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-close">
+                      <div class="dropdown">
+                        <button type="button" id="closeCard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
+                        <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
+                      </div>
+                    </div>
+                    <div class="card-header d-flex align-items-center">
+                      <h3 class="h4">Consultar Ficha</h3>
+                    </div>
+                      
+                              <h:dataTable var="list" value="#{beanGroupp.List()}">
+            <h:column>
+                <f:facet name="header">
+                <h:outputLabel value="Id Ficha"/>
+            </f:facet>
+                <h:outputText value="#{list.idGroup}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                <h:outputLabel value="Nombre "/>
+            </f:facet>
+                <h:outputText value="#{list.areasena.nameArea}"/>
+            </h:column>
+        </h:dataTable>
+                  </div>
+                </div>
+                  
+          <button style= "margin-left: 45%; background: transparent; color: green;" class="btn btn-success" name="btnAgregar"><a href="RegistrarFile.jsp">Agregar</a></button>
+        </div>
+      </div>
+    </div>
+        
+    <script src="../JS/99347ac47f.js"/>    
+    <script src="../JS/ajaxlibsjquery.js"/>
+    <script src="../JS/tether.min.js"/>
+    <script src="../JS/bootstrap.min.js"/>
+    <script src="../JS/jquery.cookie.js"/>
+    <script src="../JS/jquery.validate.min.js"/>
+    <script src="../JS/front.js"/>
+    
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src="../JS/analytics.js";
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+      </div>
+      </div>
+    </h:body>
+</html>
+

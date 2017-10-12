@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>I.S.S</title>
+   <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Iss</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="robots" content="all,follow"/>
+    <!-- Bootstrap CSS-->
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/style.default.css"/>    
+    <link rel="Stylesheet" type="text/css" href="../CSS/custom.css"/>
+    <link rel="Stylesheet" type="text/css" href="../CSS/stylemyfontastic.css"/>   
+        <!--Archivo Favicon-->
+    <link rel="shortcut icon" href="../Img/favicon.ico"/>
+  </h:head>
+  <h:body>
+
+    <div class="page home-page">                              
+      <!-- Main Navbar-->
+      <header class="header">
+          <nav class="navbar" >
+          <!-- Search Box-->
+          <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="Que Desea Ver..." class="form-control"/>
+            </form>
+          </div>
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between" >
+              <!-- Navbar Header-->
+              <div class="navbar-header">
+                  
+                <!-- Navbar Brand --><a href="menu.jsp" class="navbar-brand">
+                  <div class="brand-text brand-big hidden-lg-down"><span></span><strong>Programación</strong></div>
+                  <div class="brand-text brand-small"><strong>ISS</strong></div></a>
+                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+              </div>
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Search-->
+                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                <!-- Notifications-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>Tiene 6 mensajes</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>Tiene 2 seguidores</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Servidor Reiniciado</div>
+                          <div class="notification-time"><small>4 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item"> 
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>Tiene 3 seguidores</div>
+                          <div class="notification-time"><small>10 minutos </small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Ver Notficaciones</strong></a></li>
+                  </ul>
+                </li>
+                <!-- Messages                        -->
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Instructor Diego</h3><span>Mensaje Eniviado</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Instructora Soraya</h3><span>Mensaje Enviado</span>
+                        </div></a></li>
+                    <li>
+                        <a rel="nofollow" href="#" class="dropdown-item d-flex"> 
+                        <div class="msg-profile"> <img src="../Img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"/></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Instructora Jackeline</h3><span>Mensaje Enviado</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Lee todos los mensajes</strong></a></li>
+                  </ul>
+                </li>
+                <!-- Logout    -->
+                <li class="nav-item"><a href="index.jsp" class="nav-link logout">Cerrar Session<i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center">
+            <div class="avatar"><img src="../Img/logo.png" alt="..." class="img-fluid rounded-circle"/></div>
+            <div class="title">
+                
+<!-- Puede Ir la Variable de la persona y validar la sesion--><h1 class="h4">Diego Alejandro Boada</h1>
+              <p>Instructor</p>
+            </div>
+          </div>
+          <!-- Sidebar Navidation Menus--><span class="heading">Principal</span>
+          <ul class="list-unstyled">
+            <li class="active"> <a href="menu.jsp"><i class="icon-home"></i>Casa</a></li>
+        
+            <li> <a href="ListFile.html"> <i class="fa fa-hourglass"></i>Programación</a></li>
+            <li> <a href="#Validate" aria-expanded="false" data-toggle="collapse"> <i class="fa fa-bar-chart"></i>Validar</a>
+                 <ul id="Validate" class="collapse list-unstyled">
+                <li><a href="#">Validar Programación</a></li>
+              </ul>
+            </li>
+          </ul><span class="heading">Extras</span>
+          <ul class="list-unstyled">
+            <li> <a href="Mapa.jsp"> <i class="fa fa-map-marker"></i>Mapa</a></li>
+            <li> <a href="#"> <i class="fa fa-calendar-check-o"></i>Calendario</a></li>
+          </ul>
+        </nav>
+        <div class="content-inner">
+          <!-- Page Header-->
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">Sena</h2>
+            </div>
+          </header>
+          
+          <div class="jumbotron">
+              <h1>Bienvenidos Programación de Instructores</h1>
+              <h1>Instructor</h1>
+          </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cerrar Sesión</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+             
+          <div class="modal-body">
+           <img src="puertaAzul.png"  style="height: 100px; width: 100px; margin-left: 20%; border-radius: 20px;" alt=""/><br/><br/>
+            Seleccione "Cerrar sesión" está seguro de volver a inicio.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="Index.html">Cerrar Sesión</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+          
+        </div>
+      </div>
+    </div>
+    <div id="style-switch" class="collapse">
+      <p><img src="../Img/template-mac.png" alt="" class="img-fluid"/></p>
+      <p class="text-muted text-small"> <small>Stylesheet switching is done via JavaScript and can cause a blink while page loads. This will not happen in your production code.</small></p>
+    </div>
+    <!-- Javascript files-->
+    <script src="../JS/99347ac47f.js"/>    
+    <script src="../JS/ajaxlibsjquery.js"/>
+    <script src="../JS/tether.min.js"/>
+    <script src="../JS/bootstrap.min.js"/>
+    <script src="../JS/jquery.cookie.js"/>
+    <script src="../JS/jquery.validate.min.js"/>
+    <script src="../JS/front.js"/>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <!---->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </h:body>
+</html>
+

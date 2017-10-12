@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Phone" optimistic-lock="version" table="phone">
+    <id name="idPhone" type="java.lang.Long">
+      <column name="IdPhone"/>
+      <generator class="identity"/>
+    </id>
+    <property name="phonenumber" type="long">
+      <column name="phonenumber" not-null="true" unique="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="persons" table="person">
+      <key>
+        <column name="fkPhoneNumber" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Person"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="institutes" table="institute">
+      <key>
+        <column name="fkInstitutePhone" not-null="true" unique="true"/>
+      </key>
+      <one-to-many class="Model.Institute"/>
+    </set>
+  </class>
+</hibernate-mapping>

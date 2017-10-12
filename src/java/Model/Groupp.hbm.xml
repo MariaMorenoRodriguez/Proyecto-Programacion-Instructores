@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 01-oct-2017 16:15:05 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="proyectiss" name="Model.Groupp" optimistic-lock="version" table="groupp">
+    <id name="idGroup" type="long">
+      <column name="IdGroup"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="Model.Areasena" fetch="select" name="areasena">
+      <column name="fkAreaSena" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.State" fetch="select" name="state">
+      <column name="fkState" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Trainingprogram" fetch="select" name="trainingprogram">
+      <column name="fkTrainingProgram" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Model.Typegroup" fetch="select" name="typegroup">
+      <column name="fkTypeGroup" not-null="true"/>
+    </many-to-one>
+    <property name="apprenticesNumber" type="long">
+      <column name="ApprenticesNumber" not-null="true"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="programmings" table="programming">
+      <key>
+        <column name="fkGroup" not-null="true"/>
+      </key>
+      <one-to-many class="Model.Programming"/>
+    </set>
+  </class>
+</hibernate-mapping>

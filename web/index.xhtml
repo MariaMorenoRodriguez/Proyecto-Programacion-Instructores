@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+        <h:body>
+        <h1>Listas</h1>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="CSS/bootstrap.min.css"/>
+        <link rel="shortcut icon" href="../Img/favicon.ico"/>
+        <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.css"/>
+        <link rel="Stylesheet" type="text/css" href="../CSS/bootstrap.min.css"/>
+        <link rel="Stylesheet" type="text/css" href="../CSS/style.default.css"/>    
+        <link rel="Stylesheet" type="text/css" href="../CSS/custom.css"/>
+        <link rel="Stylesheet" type="text/css" href="../CSS/stylemyfontastic.css"/>       
+            <head>
+        <style>
+            .fullDiv {
+	background: url('../Img/sena.jpg') no-repeat; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: orange;
+}
+
+.innerRightBlurred {
+	position: fixed;
+	opacity:0.8;
+	background-color: #202020;
+	left: auto;
+	width: 330px;
+	top: 0;
+	bottom: 0;
+	right: 0; 
+}
+
+.innerRight {
+	position: fixed;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	right: 0; 
+	color:#707070;
+}
+.innerLeft{
+	position: fixed;
+	opacity:1;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	left: 0; 
+	right:330px;
+}
+
+.qrcode{
+	position: fixed;
+	opacity:1;
+	left: auto;
+	bottom: 10px;
+	right:330px;
+	padding-right: 10px;
+	padding-top:10px;
+}
+
+.innerLeftBlurred{
+	opacity:0.8;
+	background-color: #404040;
+	position: fixed;
+	left: auto;
+	top: 0;
+	bottom: 0;
+	left: 0; 
+	right:330px; 
+}
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox{
+	margin-bottom: 10px;
+}
+.checkbox{
+  color:rgb(14, 134, 232);
+	margin-left: 20px;
+}
+
+.form-signin .checkbox{
+	font-weight: normal;
+}
+.form-signin .form-control
+{
+	position: relative;
+	font-size: 18px;
+	height: auto;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.form-signin .form-control:focus{
+	z-index: 2;
+}
+.form-signin input[type="text"]{
+	margin-bottom: 15px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 250px;
+  color:white;
+}
+.form-signin input[type="password"]{
+  color:white;
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	width: 250px;
+}
+.account-wall{
+	margin-top: auto;
+	margin-right: 10px;
+	padding-left: 200px;
+	padding: 20px;
+}
+.login-title{
+	color: #555;
+	font-size: 50px;
+	font-weight: 400;
+	display: block;
+}
+.profile-img{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.need-help{
+	margin-top: 10px;
+}
+.new-account{
+	display: block;
+}
+        </style>
+</head>
+	<div class="fullDiv">
+		<div class="innerLeftBlurred"></div>
+	</div>
+	<div class="innerRightBlurred"></div>
+	<div class="innerRight">
+		<div class="row">
+			<h1 class="text-center login-title"></h1>
+			<div class="account-wall">
+				<img class="profile-img" src="../Img/logo.png" alt=""/>
+                                <h:form class="form-signin">
+                                    <h:inputText id="txtId" class="form-control" required=""/>
+                                    <h:inputText id="txtpass" class="form-control" required=""/>
+					
+                                        <button formaction="Menu.jsp" class="btn btn-lg btn-block" name="btnLogin" style="background-color:#fc7323; color: white;" type="submit" data-ng-click="loginFunction()">
+						Ingresar
+					</button>
+					<label style="color:white;" class="checkbox pull-left">
+                                            <h:inputText value="remember-me"/>
+					</label>
+                                        <a href="#" style="color:white;  text-decoration: none;" class="pull-right need-help">Necesita Ayuda? </a><span class="clearfix"></span>
+				</h:form>
+			</div>
+		</div>
+	</div>
+        <script src="JS/99347ac47f.js"/>    
+        <script src="JS/ajaxlibsjquery.js"/>
+        <script src="JS/tether.min.js"/>
+        <script src="JS/bootstrap.min.js"/>
+        <script src="JS/jquery.cookie.js"/>
+        <script src="JS/jquery.validate.min.js"/>
+        <script src="JS/front.js"/>
+    </h:body>
+</html>
+
